@@ -1,5 +1,5 @@
 import { Router } from "express";
-import deviceController from "../contoller.js"
+import deviceController from "../Devices/contoller.js"
 const mainRouter = new Router();
 
 mainRouter.get("/getDevises", deviceController.getDevices);
