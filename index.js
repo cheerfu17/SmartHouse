@@ -13,16 +13,11 @@ app.use("/", mainRouter);
 
 async function startServer(){
     try {
-        //Подключение к базе данных
-        await create_cfg_file();
-        setTimeout(async () =>  {
-            const MAC = await readJSONValue("deviceConfig.json" ,"MAC");
-            console.log(MAC);
-            const IP = await findIp(MAC);
-            
-            await writeJSON("deviceConfig.json", "IP", IP);
-          }, 1000);
-
+        //await create_cfg_file();
+        const MAC = await readJSONValue("deviceConfig.json" ,"MAC");
+        console.log(MAC);
+        const IP = await findIp(MAC);
+        await writeJSON("deviceConfig.json", "IP", IP);
 
         app.listen(PORT, () => console.log(`The server is listening on port ${PORT}"`));
     } catch (error) {
