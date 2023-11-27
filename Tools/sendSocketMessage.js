@@ -2,7 +2,7 @@ import net from "net"
 
 export default async function sendSocketMessage(host, port, message) {
     const client = new net.Socket();
-
+    
     client.connect(port, host, () => {
         console.log('Connected to server');
         client.write(message);
