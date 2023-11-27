@@ -15,7 +15,6 @@ async function startServer(){
     try {
         //await create_cfg_file();
         const MAC = await readJSONValue("deviceConfig.json" ,"MAC");
-        console.log(MAC);
         const IP = await findIp(MAC);
         await writeJSON("deviceConfig.json", "IP", IP);
 

@@ -5,6 +5,5 @@ export default async function readJSONValue(fileName, key){
     
 
     const object = JSON.parse(json);
-    console.log(object[key]);
     return object[key];
 }
