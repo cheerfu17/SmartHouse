@@ -12,8 +12,8 @@ class deviceController{
 
     async changeState(req, res){
         try {
-            //Здесь должен быть вызов функции изменения состояния устройства
-            return res.json(); //Возвращение результата операции на клиент
+            const change = await deviceService.changeState(req.body.body);
+            return res.json(change); //Возвращение результата операции на клиент
         } catch (error) {
             res.status(500).json({"error": error.message}); 
         }
