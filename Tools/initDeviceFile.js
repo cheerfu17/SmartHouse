@@ -15,8 +15,7 @@ export default async function create_cfg_file()
         if (err) {
             console.error('Ошибка при создании файла:', err);
         } else {
-            console.log('Файл успешно создан');
-            
+            console.log('Файл успешно создан'); 
         }
         });
     } else {

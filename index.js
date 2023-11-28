@@ -5,9 +5,11 @@ import findIp from "./Tools/findIpByMac.js";
 import readJSONValue from "./Tools/readJSON.js";
 import writeJSON from "./Tools/writeJSON.js";
 import create_cfg_file from "./Tools/initDeviceFile.js";
+import cors from "cors"
 
 const PORT = process.env.PORT || 5050;
 const app = express();
+app.use(cors());
 app.use(express.json());
 app.use("/", mainRouter);
 

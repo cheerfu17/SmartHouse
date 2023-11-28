@@ -1,2 +1,4 @@
 /node_modules
+./sm_server/node_modules
+
 package-lock.json

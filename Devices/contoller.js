@@ -13,7 +13,7 @@ class deviceController{
     async changeState(req, res){
         try {
             const change = await deviceService.changeState(req.body.body);
-            return res.json(change); //Возвращение результата операции на клиент
+            return res.status(200).json({"data": "OK"}); //Возвращение результата операции на клиент
         } catch (error) {
             res.status(500).json({"error": error.message}); 
         }
