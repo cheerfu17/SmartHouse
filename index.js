@@ -1,4 +1,3 @@
-import "dotenv/config";
 import express from "express";
 import mainRouter from "./Devices/router.js";
 import findIp from "./Tools/findIpByMac.js";
@@ -7,7 +6,7 @@ import writeJSON from "./Tools/writeJSON.js";
 import create_cfg_file from "./Tools/initDeviceFile.js";
 import cors from "cors"
 
-const PORT = process.env.PORT || 5050;
+const PORT = 5050;
 const app = express();
 app.use(cors());
 app.use(express.json());

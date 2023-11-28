@@ -2,7 +2,7 @@ import { exec } from 'child_process';
 
 async function findIpByMac(macAddress) {
     return new Promise((resolve, reject) => {
-      const command = `arp -a | find "${macAddress}"`;
+      const command = `arp -a | findsrc "${macAddress}"`;
   
       exec(command, (error, stdout) => {
         if (error) {
