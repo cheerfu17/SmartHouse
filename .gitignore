@@ -2,3 +2,4 @@
 ./sm_server/node_modules
 
 package-lock.json
+global_ip.js

@@ -1,7 +1,8 @@
 import axios from "axios";
+import { IP } from "./global_ip";
 
 const $host = axios.create({
-    baseURL: "http://127.0.0.1:5050/"
+    baseURL: IP
 });
 
 export {
