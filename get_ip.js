@@ -26,7 +26,7 @@ getGlobalIp()
       if (err) {
         console.error('Ошибка при записи в файл:', err);
       } else {
-        console.log('Глобальный IP-адрес успешно записан в файл global_ip.txt');
+        console.log('Глобальный IP-адрес успешно записан в файл global_ip.js');
       }
     });
   })
